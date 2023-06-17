@@ -20,7 +20,7 @@ export default function HeroSection() {
           &nbsp;I love building innovative web experiences and thrive on the
           challenge of turning ideas into reality. Whether you&rsquo;re an
           individual or a business seeking to bring your visions to life,
-          let&rsqo;s create something amazing together!
+          let&rsquo;s create something amazing together!
         </p>
         <div className="btn-container">
           <button className="PrimaryButton btn">Hire Me</button>

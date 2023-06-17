@@ -4,18 +4,20 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={`${styles.row} ${styles.footerabout}`}>
-        <h3>Sajag Subedi </h3>
-        <p>
-          Ready to turn your web dreams into reality? Connect with me on social
-          media platforms and explore my projects on GitHub for a taste of what
-          we can create together!
-        </p>
+        <div className={styles.footerDesc}>
+          <h3>Discover the Possibilities for Your Web Vision</h3>
+          <p className="abouttext">
+            Ready to turn your web dreams into reality? Connect with me on
+            social media platforms and explore my projects on GitHub for a taste
+            of what we can create together!
+          </p>
+        </div>
         <div className={styles.sociallinks}>
           <a target="_blank" href="https://www.instagram.com/sajagsubedi/">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="3rem"
-              height="3rem"
+              width="2rem"
+              height="2rem"
               fill="currentColor"
               viewBox="0 0 16 16"
             >
@@ -28,8 +30,8 @@ export default function Footer() {
           <a target="_blank" href="https://github.com/sajagsubedi">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="3rem"
-              height="3rem"
+              width="2rem"
+              height="2rem"
               fill="currentColor"
               viewBox="0 0 16 16"
             >
@@ -39,11 +41,25 @@ export default function Footer() {
               ></path>
             </svg>
           </a>
+
+          <a target="_blank" href="https://np.linkedin.com/in/sajagsubedi">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+              height="2rem"
+              width="2rem"
+            >
+              <path
+                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                fill="#ffffff"
+              ></path>
+            </svg>
+          </a>
           <a target="_blank" href="https://facebook.com/sajag.subedi.3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="3rem"
-              height="3rem"
+              width="2rem"
+              height="2rem"
               fill="currentColor"
               viewBox="0 0 16 16"
             >

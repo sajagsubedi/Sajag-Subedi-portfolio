@@ -42,8 +42,15 @@
   font-weight: bold;
   position: relative;
   z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+.navigation .appnameBx .appname svg,
+.navigation .appnameBx .appname span
+{
+  color: rgb(var(--sp-txt));
+}
 .navlinks {
   width: 80%;
   overflow: hidden;

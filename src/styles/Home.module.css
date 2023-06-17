@@ -39,7 +39,7 @@
 .heroDescriptionHalf .HeroMainText .focusText {
   color: rgb(var(--sp-txt));
 }
-.heroDescriptionHalf .HeroDescription {
+.heroDescriptionHalf .HeroDescription{
   text-align: justify;
   font-size: 1.2rem;
 }
@@ -313,6 +313,9 @@
   .HeroSection .heroDescriptionHalf {
     width: 90%;
     margin: 10px auto;
+  }
+  .heroDescriptionHalf .HeroDescription{
+    font-size: 1rem;
   }
   .HeroSection .HeroMainText {
     font-size: 3rem;

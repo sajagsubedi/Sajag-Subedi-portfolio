@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Noto+Sans&family=Roboto&display=swap");
 :root {
-  --main-bg-color: 15, 13, 26;
+  --main-bg-color: 13, 10, 28;
   --white-shade: #fff;
   --sp-txt: 32, 200, 99;
   --sp-txt2: 14, 171, 233;
@@ -79,6 +79,7 @@ textarea.input-field {
   justify-content: center;
   font-weight: bold;
   align-items: center;
+  margin: 5px;
 }
 .PrimaryButton {
   background: linear-gradient(135deg, rgb(var(--sp-txt)), rgb(var(--sp-txt2)));

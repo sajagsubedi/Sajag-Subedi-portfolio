@@ -20,13 +20,13 @@ const projects = [
     id: 2,
   },
   {
-    title: "iChat",
+    title: "iCalculator",
     description:
-      "This is a realtime chat application which allows user to make group and chat with each other.",
+      "This is a user friendly Calculator  application which allows user to perform mathematical calcutions.",
     image: "/images/img3.jpg",
-    tags: ["React", "ChatEngine", "Firebase"],
-    source: "https://github.com/sajagsubedi/iChat",
-    visit: "https://myichat.netlify.app",
+    tags: ["React", "Styled-Components"],
+    source: "https://github.com/sajagsubedi/iCalculator",
+    visit: "https://icalculator.vercel.app",
     id: 3,
   },
   {
@@ -34,7 +34,7 @@ const projects = [
     description:
       "This is a  textutils application that allows user to manipulate their text into uppercase, lowercase, remove extra spaces , capitalize and copy it.",
     image: "/images/img4.jpg",
-    tags: ["React Js", "Tailwind Css"],
+    tags: ["React", "Tailwind Css"],
     source: "https://github.com/sajagsubedi/TextUtils",
     visit: "https://ourtextutils.netlify.app/",
     id: 4,

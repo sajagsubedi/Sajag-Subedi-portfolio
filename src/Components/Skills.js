@@ -7,24 +7,24 @@ import "aos/dist/aos.css";
 export default function Skills() {
   useEffect(() => {
     AOS.init({
-      duration: 3000,
+      duration: 2000,
     });
   }, []);
   return (
     <section id="skills" className={styles.Skills}>
       <div className="SectionDivider"></div>
       <h2  data-aos="fade-up"
-        data-aos-duration="3000"
+        data-aos-duration="2000"
         className="SectionTitle">My Skills</h2>
       <h3  data-aos="fade-up"
-        data-aos-duration="3000"
+        data-aos-duration="2000"
         className="SectionSubHeading">What Can I Do Well?</h3>
       <div className={styles.skillsGroup}>
         {skills.map((skill, i) => {
           return (
             <div
               data-aos="fade-up"
-              data-aos-duration="3000"
+              data-aos-duration="2000"
               key={i}
               className={styles.skillbar}
             >

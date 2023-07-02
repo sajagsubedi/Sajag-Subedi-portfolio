@@ -8,18 +8,18 @@ export default function Contact() {
   const form = useRef();
   useEffect(() => {
     AOS.init({
-      duration: 3000,
+      duration: 100,
     });
   }, []);
   const sendEmail = (e) => {
     e.preventDefault();
-
+    console.log(process.env);
     emailjs
       .sendForm(
         "service_28p58f9",
         "template_ga97rxq",
         form.current,
-        "9a16JeTIPa66F30in"
+        process.env.NEXT_PUBLIC_KEY
       )
       .then(
         (result) => {
@@ -36,17 +36,17 @@ export default function Contact() {
     <section id="contact" className={styles.Contact}>
       <div
         data-aos="fade-up"
-        data-aos-duration="3000"
+        data-aos-duration="1000"
         className="SectionDivider"
       ></div>
-      <h2 data-aos="fade-up" data-aos-duration="3000" className="SectionTitle">
+      <h2 data-aos="fade-up" data-aos-duration="1000" className="SectionTitle">
         Contact Me
       </h2>
       <form
         ref={form}
         onSubmit={sendEmail}
         data-aos="fade-up"
-        data-aos-duration="3000"
+        data-aos-duration="1000"
         className={styles.form}
       >
         <h3 className={styles.formTitle}>Get In Touch</h3>
@@ -58,7 +58,8 @@ export default function Contact() {
             type="text"
             name="from_name"
             min-length="5"
-            required/>
+            required
+          />
         </div>
         <div className="input-field-div">
           <label className="form-label">Email</label>

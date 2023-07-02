@@ -6,24 +6,30 @@ import "aos/dist/aos.css";
 export default function Services() {
   useEffect(() => {
     AOS.init({
-      duration: 3000,
+      duration: 100,
     });
   }, []);
   return (
     <section id="services" className={styles.Services}>
-      <div  data-aos="fade-up"
-        data-aos-duration="3000"
-       className="SectionDivider"></div>
-      <h2 data-aos="fade-up"
-        data-aos-duration="3000"
-        className="SectionTitle">My Services</h2>
-      <h3  data-aos="fade-up"
-        data-aos-duration="3000"
-       className="SectionSubHeading">What Can I Offer?</h3>
+      <div
+        data-aos="fade-up"
+        data-aos-duration="2000"
+        className="SectionDivider"
+      ></div>
+      <h2 data-aos="fade-up" data-aos-duration="2000" className="SectionTitle">
+        My Services
+      </h2>
+      <h3
+        data-aos="fade-up"
+        data-aos-duration="2000"
+        className="SectionSubHeading"
+      >
+        What Can I Offer?
+      </h3>
       <div className={styles.ServicesGroup}>
         <div
           data-aos="fade-up"
-          data-aos-duration="3000"
+          data-aos-duration="2000"
           className={styles.ServiceItem}
         >
           <div className={styles.ServiceIcon}>
@@ -52,7 +58,7 @@ export default function Services() {
 
         <div
           data-aos="fade-up"
-          data-aos-duration="3000"
+          data-aos-duration="2000"
           className={styles.ServiceItem}
         >
           <div className={styles.ServiceIcon}>
@@ -80,7 +86,7 @@ export default function Services() {
         </div>
         <div
           data-aos="fade-up"
-          data-aos-duration="3000"
+          data-aos-duration="2000"
           className={styles.ServiceItem}
         >
           <div className={styles.ServiceIcon}>

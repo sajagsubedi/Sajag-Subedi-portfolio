@@ -3,36 +3,49 @@ import { projects } from "../Constants/Projects.js";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Image from "next/image";
 
 export default function Projects() {
   useEffect(() => {
     AOS.init({
-      duration: 3000,
+      duration: 2000,
     });
   }, []);
   return (
     <section id="Projects" className={styles.Projects}>
-      <div  data-aos="fade-up"
-        data-aos-duration="3000"
-        className="SectionDivider"></div>
-      <h2  data-aos="fade-up"
-        data-aos-duration="3000"
-       className="SectionTitle">My Projects</h2>
-      <h3  data-aos="fade-up"
-        data-aos-duration="3000"
-        className="SectionSubHeading">What Have I Accomplished?</h3>
+      <div
+        data-aos="fade-up"
+        data-aos-duration="2000"
+        className="SectionDivider"
+      ></div>
+      <h2 data-aos="fade-up" data-aos-duration="2000" className="SectionTitle">
+        My Projects
+      </h2>
+      <h3
+        data-aos="fade-up"
+        data-aos-duration="2000"
+        className="SectionSubHeading"
+      >
+        What Have I Accomplished?
+      </h3>
 
       <div className={styles.Projectsgroup}>
         {projects.map((project, i) => {
           return (
             <div
               data-aos="fade-up"
-              data-aos-duration="3000"
+              data-aos-duration="2000"
               key={i}
               className={styles.ProjectItem}
             >
               <div className={styles.imgBx}>
-                <img alt="project" src={project.image} />
+                <Image
+                  alt="project"
+                  src={project.image}
+                  width={100}
+                  height={100}
+                  loading="lazy"
+                />
               </div>
               <div className={styles.descriptionBx}>
                 <h4 className={styles.projectTitle}>{project.title}</h4>

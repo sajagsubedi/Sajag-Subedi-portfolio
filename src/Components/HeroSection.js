@@ -28,7 +28,13 @@ export default function HeroSection() {
         </div>
       </div>
       <div className={styles.heroImageHalf}>
-        <img className={styles.heroImg} src="/home.png" alt="Sajag" />
+        <Image
+          className={styles.heroImg}
+          src={"/home.png"}
+          alt="Sajag"
+          width={350}
+          height={350}
+        />
         <div className={styles.heroImageTextBx}>
           <div className={styles.hrLine}></div>
           <div className={styles.hrLine}></div>

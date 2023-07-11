@@ -3,7 +3,7 @@
   padding: 50px 10vw;
   background-color: rgb(var(--main-bg-color));
   color: white;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .main::after {
   content: "";

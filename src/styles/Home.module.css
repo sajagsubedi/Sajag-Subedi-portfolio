@@ -35,34 +35,31 @@
   justify-content: space-between;
 }
 .HeroSection .heroDescriptionHalf {
-  width: 50%;
+  width: 40%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  word-wrap: break-word;
 }
 .heroDescriptionHalf .HeroMainText {
-  font-size: 4rem;
-  line-height: 5rem;
+  font-size: 2.5rem;
 }
-.heroDescriptionHalf .HeroMainText .focusText {
-  color: rgb(var(--sp-txt));
-}
-.heroDescriptionHalf .HeroDescription {
-  text-align: justify;
-  font-size: 1.2rem;
-  line-height: 1.4rem;
+.heroDescriptionHalf .HeroMainText .supportingText{
+font-size: 2rem;
 }
 .heroImageHalf {
-  width: 50%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   gap: 10px;
 }
-.heroImageHalf .heroImg {
-  width: 80%;
+.heroImageHalf .heroImgBx {
+  position: relative;
+  width: 50vw;
+  height: 40vw;
 }
 .heroImageHalf .heroImageTextBx {
   display: flex;
@@ -78,8 +75,12 @@
 .heroImageHalf .heroImageTextBx .hrLine:nth-child(1) {
   width: 40px;
 }
-.heroImageHalf .heroImageTextBx .heroImageText {
-  color: white;
+/* ---------About Section----------- */
+
+ .about .aboutBody .aboutText {
+  text-align: justify;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
 }
 /*---------Services Section--------*/
 .Services {
@@ -312,7 +313,7 @@
 }
 
 /*---------Media Queries --------*/
-@media (max-width: 900px) {
+@media (max-width: 772px) {
   .main {
     padding: 5vw;
   }
@@ -320,8 +321,14 @@
     flex-direction: column-reverse;
   }
   .HeroSection .heroImageHalf {
+    width: 90vw;
+    height: 65vh;
+ }
+  .heroImageHalf .heroImgBx {
+    height: 100%;
     width: 100%;
   }
+
   .HeroSection .heroDescriptionHalf {
     width: 90%;
     margin: 10px auto;

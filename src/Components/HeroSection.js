@@ -1,40 +1,53 @@
-import styles from "@/styles/Home.module.css";
+import React, { useEffect, useRef } from "react";
+import Typed from "typed.js";
 import Image from "next/image";
+import Link from "next/link";
+import styles from "@/styles/Home.module.css";
 
-export default function HeroSection() {
+const HeroSection = () => {
+  const el = useRef(null);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const typed = new Typed(el.current, {
+        strings: ["-A Web Developer ", "-A Web Designer "],
+        typeSpeed: 50,
+      });
+      return () => {
+        typed.destroy();
+      };
+    }
+  }, []);
+
   return (
-    <section id="about" className={styles.HeroSection}>
+    <section id="Hero" className={styles.HeroSection}>
       <div className={styles.heroDescriptionHalf}>
+        <h2 className={styles.heroText}>Hello Everyone,I am</h2>
         <h1 className={styles.HeroMainText}>
-          <span className={styles.focusText}>Sajag</span> Subedi
+          <span className="focusText">Sajag Subedi</span>
+          <span
+            ref={el}
+            className={`supportingText ${styles.supportingText}`}
+          ></span>
         </h1>
-        <p className={styles.HeroDescription}>
-          Welcome to my portfolio! I&rsquo;m Sajag Subedi, a passionate web
-          developer based in Pokhara. With a year of experience under my belt, I
-          specialize in full stack web development using the MERN stack. I
-          continuously refine my skills through YouTube and other free resources
-          to stay up-to-date with the latest technologies and programming
-          languages.
-          <br />
-          <br />
-          &nbsp;I love building innovative web experiences and thrive on the
-          challenge of turning ideas into reality. Whether you&rsquo;re an
-          individual or a business seeking to bring your visions to life,
-          let&rsquo;s create something amazing together!
-        </p>
+
         <div className="btn-container">
           <button className="PrimaryButton btn">Hire Me</button>
-          <button className="SecondaryButton btn"> Explore More</button>
+          <button className="SecondaryButton btn">
+            <Link href={"/#about"}>About Me</Link>
+          </button>
         </div>
       </div>
       <div className={styles.heroImageHalf}>
-        <Image
-          className={styles.heroImg}
-          src={"/home.png"}
-          alt="Sajag"
-          width={350}
-          height={350}
-        />
+        <div className={styles.heroImgBx}>
+          <Image
+            className={styles.heroImg}
+            src={"/home.png"}
+            alt="Sajag"
+            objectFit="contain"
+            layout="fill"
+          />
+        </div>
         <div className={styles.heroImageTextBx}>
           <div className={styles.hrLine}></div>
           <div className={styles.hrLine}></div>
@@ -43,4 +56,6 @@ export default function HeroSection() {
       </div>
     </section>
   );
-}
+};
+
+export default HeroSection;

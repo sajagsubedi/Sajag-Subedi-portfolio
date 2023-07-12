@@ -86,7 +86,7 @@ export default function Footer() {
         </div>
       </div>
       <p className={styles.footercopyright}>
-        Copyright &copy; 2023 Sajag Subedi. All rights reserved.
+      Copyright &nbsp; 2023 Sajag Subedi. All rights reserved. Unauthorized use prohibited.
       </p>
     </footer>
   );

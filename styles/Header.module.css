@@ -1,159 +1,175 @@
-.header {
-  width: 100%;
-  overflow: hidden;
-  padding: 30px 5rem;
-  font-family: "Baloo Bhaina 2", cursive;
-}
-.nav {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: right;
-}
-.navigation {
+.Header {
+  position: sticky;
   top: 0;
-  right: 0;
-  width: 100%;
-  height: 60px;
-  display: flex;
-  position: fixed;
-  justify-content: space-between;
-  overflow: hidden;
-  z-index: 2;
-  background-color: rgb(var(--main-bg-color));
-  box-shadow: 0 25px 10px rgb(var(--blackshade), 0.5);
+  z-index: 99;
 }
-.phoneVisible {
-  position: relative;
-  z-index: 3;
+
+.Navbar {
+  padding: 10px 7vw;
+  height: 60px;
+  width: 100%;
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  gap: 5vw;
+  overflow: hidden;
+  background-color: rgb(var(--main-bg-color));
+  box-shadow: 0 5px 5px rgba(var(--shade-color), 0.5);
+}
+
+.Navbar .navFirsthalf {
   width: 20%;
   display: flex;
-  height: 60px;
-  align-items: center;
   justify-content: space-between;
-  background-color: rgb(var(--main-bg-color));
-  padding: 10px;
+  align-items: center;
+  gap: 6px;
 }
-.navigation .appnameBx .appname {
-  white-space: nowrap;
-  color: white;
-  font-size: 1.4em;
-  font-weight: bold;
-  position: relative;
-  z-index: 3;
+
+.Navbar .navFirsthalf .logoBx {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.Navbar .navFirsthalf .logoBx .logo {
+  width: 40px;
+  height: 40px;
+  fill: rgb(var(--focus-color));
+}
+.Navbar .navFirsthalf .appName {
+  color: var(--text-color);
+}
+.Navbar .navFirsthalf .appName .focusText {
+  color: rgb(var(--focus-color));
+}
+.Navbar .navFirsthalf .themeToggle {
+  position: absolute;
+  top: 0px;
+  height: 60px;
+  right: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.navigation .appnameBx .appname svg,
-.navigation .appnameBx .appname span {
-  color: rgb(var(--sp-txt));
+.Navbar .navFirsthalf .themeToggle .themeToggleBtn {
+  background: transparent;
+  outline: none;
+  border: none;
+  color: var(--text-color);
 }
-.navlinks {
-  width: 80%;
-  overflow: hidden;
-  padding: 10px;
+.Navbar .modeBtnHidden {
+  display: none;
 }
-
-.menu {
-  justify-content: space-between;
-  align-items: center;
-  display: flex;
-  height: 100%;
-  padding: 5px;
-}
-
-.menu li {
-  list-style: none;
-  align-items: center;
-  justify-content: center;
-}
-
-.menu li a {
-  text-decoration: none;
-  font-size: 1em;
-  padding: 5px;
-  color: white;
-}
-.active {
-  color: var(--white-shade) !important;
-}
-.menu li a:hover {
-  color: rgb(var(--sp-txt));
-  border-bottom: 2px solid rgb(var(--sp-txt));
-}
-
-.navigation .menuToggle {
-  width: 60px;
-  height: 60px;
+.Navbar .menuToggle {
+  width: 50px;
+  height: 50px;
   display: none;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  font-weight: bolder;
-  font-size: 1.2rem;
-  color: white;
 }
 
-@media (max-width: 772px) {
-  .navigation {
-    flex-direction: column;
-    justify-content: start;
-    background: transparent;
-    height: 60px;
+.Navbar .menuToggle::before {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 2px;
+  background: var(--text-color);
+  transform: translateY(-10px);
+  box-shadow: 0 10px var(--text-color);
+  transition: 0.5s;
+}
+
+.Navbar.active .menuToggle::before {
+  content: "";
+  transform: translateY(0px) rotate(45deg);
+  box-shadow: 0 0 rgb(var(--focus-color));
+  background: rgb(var(--focus-color));
+}
+
+.Navbar .menuToggle::after {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 2px;
+  background: var(--text-color);
+  transform: translateY(10px);
+  transition: 0.5s;
+}
+
+.Navbar.active .menuToggle::after {
+  transform: translateY(0px) rotate(-45deg);
+  box-shadow: 0 0 rgb(var(--focus-color));
+  background: rgb(var(--focus-color));
+}
+
+.Navbar .menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  gap: 7px;
+}
+
+.Navbar .menu li {
+  list-style: none;
+}
+
+.Navbar .menu li a {
+  color: var(--text-color);
+  padding: 5px;
+  text-decoration: none;
+}
+
+.Navbar .menu li a:hover {
+  border-bottom: 2px solid rgb(var(--focus-color));
+  color: rgb(var(--focus-color));
+}
+
+@media (max-width: 790px) {
+  .Navbar {
+    justify-content: flex-start;
     align-items: flex-end;
-    transition: height 0s;
-    transition-delay: 0.5s;
-  }
-  .navigation.active {
-    box-shadow: none;
-    height: 100vh;
-    transition: height 0s;
-    transition-delay: 0s;
-  }
-  .phoneVisible {
-    width: 100%;
-    box-shadow: 0 25px 10px rgb(var(--blackshade), 0.5);
-  }
-  .navlinks {
-    width: 0px;
-    height: calc(100vh - 60px);
-    overflow: hidden;
-    transition: height 0.5s, width 0.5s;
-    transition-delay: 0s, 0s;
-  }
-  .navigation.active .navlinks {
-    width: 40%;
-    transition: height 0.5s, width 0.5s;
-    transition-delay: 0s, 0s;
-  }
-  .navigation .navlinks::after {
-    content: "";
-    top: 60px;
-    width: 0%;
-    right: 0px;
-    height: calc(100vh - 60px);
-    position: absolute;
-    z-index: -1;
-    background: black;
-    opacity: 0.6;
-    transition: height 0.5s, width 0.5s;
-    transition-delay: 0s, 0s;
-  }
-  .navigation.active .navlinks::after {
-    width: 40%;
-    transition: height 0.5s, width 0.5s;
-    transition-delay: 0s, 0s;
+    flex-direction: column;
+    padding: 0;
+    gap: 0;
+    overflow: visible;
   }
 
-  .menu {
+  .Navbar .navFirsthalf {
+    width: 100%;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
-    height: 80%;
-    justify-content: space-around;
-    border-top: 1px solid rgba(0, 0, 0, 0.4);
+    height: 60px;
+    box-shadow: 0 3px 5px rgba(var(--shade-color), 0.5);
   }
-  .navigation .menuToggle {
+.Navbar .navFirsthalf .themeToggle {
+  right: 50px;
+}
+  .Navbar .menuToggle {
     display: flex;
+  }
+
+  .Navbar .menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: calc(100vh - 60px);
+    width: 0;
+    padding-bottom: 70px;
+    top: 60px;
+    position: absolute;
+    background-color: rgba(var(--shade-color), 0.5);
+    overflow: hidden;
+    transition: width 0.5s;
+    transition-delay: 0s;
+  }
+
+  .Navbar.active .menu {
+    width: 50vw;
   }
 }

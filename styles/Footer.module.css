@@ -11,7 +11,7 @@
 
 .footer h3,
 .footer h4 {
-  color: white;
+  color: var(--text-color);
   text-align: center;
 }
 
@@ -24,7 +24,7 @@
   flex-direction: column;
   gap: 2.5rem;
   padding-bottom: 2.5rem;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid var(--text-color);
   font-size: 1rem;
   align-items: center;
 }
@@ -52,18 +52,21 @@
 .sociallinks a {
   font-size: 3rem;
   text-decoration: none;
-  color: white;
+  color: var(--text-color);
   margin: 5px;
+}
+.sociallinks a svg{
+  fill: var(--text-color);
 }
 
 .footer p {
   text-align: center;
-  color: white;
+  color: var(--text-color);
 }
 
 .footer .column p a {
   text-decoration: none;
-  color: white;
+  color: var(--text-color);
 }
 @media (max-width: 700px) {
   .sociallinks {

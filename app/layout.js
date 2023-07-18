@@ -1,9 +1,10 @@
 import "@/styles/globals.css";
-import { Header, Footer } from "@/Components";
+import { Header, Footer, ScrollTop } from "@/Components";
 
 export const metadata = {
   title: "Sajag Subedi: Innovative Web Developer",
-  description: "Sajag,full stack web developer. Discover the realm of cutting-edge tech solutions and explore the services offered by this passionate and skilled professional.",
+  description:
+    "Sajag,full stack web developer. Discover the realm of cutting-edge tech solutions and explore the services offered by this passionate and skilled professional.",
 };
 
 export default function RootLayout({ children }) {
@@ -17,8 +18,13 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="57x57" href="favicon.ico" />
-      </head>
-      <body>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap"
+          rel="stylesheet"
+        />
+        </head>
+        <body>
+        <ScrollTop />
         <Header />
         {children}
         <Footer />

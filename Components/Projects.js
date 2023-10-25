@@ -8,22 +8,22 @@ import Image from "next/image";
 export default function Projects() {
   useEffect(() => {
     AOS.init({
-      duration: 2000,
+      duration: 1000,
     });
   }, []);
   return (
     <section id="Projects" className={styles.Projects}>
       <div
         data-aos="fade-up"
-        data-aos-duration="2000"
+        data-aos-duration="1000"
         className="SectionDivider"
       ></div>
-      <h2 data-aos="fade-up" data-aos-duration="2000" className="SectionTitle">
+      <h2 data-aos="fade-up" data-aos-duration="1000" className="SectionTitle">
         My Projects
       </h2>
       <h3
         data-aos="fade-up"
-        data-aos-duration="2000"
+        data-aos-duration="1000"
         className="SectionSubHeading"
       >
         What Have I Accomplished?
@@ -34,7 +34,7 @@ export default function Projects() {
           return (
             <div
               data-aos="fade-up"
-              data-aos-duration="2000"
+              data-aos-duration="1000"
               key={i}
               className={styles.ProjectItem}
             >

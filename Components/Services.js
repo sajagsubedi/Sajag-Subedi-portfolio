@@ -13,7 +13,7 @@ export default function Services() {
     <section id="services" className={styles.Services}>
       <div
         data-aos="fade-up"
-        data-aos-duration="2000"
+        data-aos-duration="1000"
         className="SectionDivider"
       ></div>
       <h2 data-aos="fade-up" data-aos-duration="2000" className="SectionTitle">
@@ -21,7 +21,7 @@ export default function Services() {
       </h2>
       <h3
         data-aos="fade-up"
-        data-aos-duration="2000"
+        data-aos-duration="1000"
         className="SectionSubHeading"
       >
         What Can I Offer?

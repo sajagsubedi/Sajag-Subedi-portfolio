@@ -32,24 +32,9 @@ const About = () => {
         className={styles.aboutBody}
       >
         <p className={styles.aboutText}>
-          Hey there, I'm Sajag Subedi, a self-taught web developer based in
-          Pokhara. With a year of experience under my belt, I've embarked on an
-          exciting coding journey, honing my expertise in the MERN stack. With a
-          strong foundation in HTML, CSS, and JavaScript, I quickly progressed
-          to learning Node.js and React.js. I also have a good grasp of Next.js
-          and styling libraries like Tailwind CSS and Styled Components.
-          Continuously learning and staying up-to-date with the latest
-          technologies, I create innovative web experiences by turning ideas
-          into reality. 
-          <br/><br/> &nbsp;&nbsp;In this fast-paced web development world, I constantly
-          refine my skills to provide modern web solutions. My journey began
-          with an intense four-month dive into HTML, CSS, and JavaScript, and I
-          have since developed expertise in the MERN stack. Transforming
-          concepts into functional websites, I'm driven by the satisfaction of
-          bringing visions to life through code. Whether you're an individual or
-          a business seeking exceptional web development, let's connect and
-          create remarkable online experiences together.
-        </p>
+          Hello, I'm Sajag Subedi, a self-taught web developer from Pokhara. My coding journey began with an intense four-month dive into HTML, CSS, and JavaScript, providing a solid foundation. Over the past two years, I've honed my expertise in the MERN stack, seamlessly integrating Node.js and React.js into my skill set. 
+          <br/><br/> &nbsp;&nbsp;
+Driven by the satisfaction of transforming concepts into functional websites, I continually refine my skills. Recently, I've delved into Typescript, C, and Golang, broadening my capabilities. Let's connect and bring your visions to life through code, creating remarkable online experiences together.        </p>
       </div>
     </section>
   );

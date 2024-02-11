@@ -16,7 +16,7 @@ const projects = [
     image: "/images/img2.jpg",
     tags: ["React", "Nodejs", "MongoDb", "Express"],
     source: "https://github.com/sajagsubedi/iNotebook-frontend",
-    visit: "https://github.com/sajagsubedi/iNotebook_frontend",
+    visit: "https://inotebook-sajag.netlify.app/",
     id: 2,
   },
   {

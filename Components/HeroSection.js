@@ -22,7 +22,7 @@ const HeroSection = () => {
   return (
     <section id="Hero" className={styles.HeroSection}>
       <div className={styles.heroDescriptionHalf}>
-        <h2 className={styles.heroText}>Hello Everyone, I am</h2>
+        <h2 className={styles.heroText}>Hello Everyone, I'm</h2>
         <h1 className={styles.HeroMainText}>
           <span className="focusText">Sajag Subedi</span>
           <span

@@ -1,15 +1,20 @@
 import styles from "@/styles/Home.module.css";
 import { skills } from "../Constants/Skills.js";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function Skills() {
-  useEffect(() => {
-    AOS.init({
+  window.addEventListener("load",()=>{
+      AOS.init({
       duration: 1000,
     });
-  }, []);
+  });
+  // useEffect(() => {
+  //   AOS.init({
+  //     duration: 1000,
+  //   });
+  // }, []);
   return (
     <section id="skills" className={styles.Skills}>
       <div className="SectionDivider"></div>

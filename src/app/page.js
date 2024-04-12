@@ -6,7 +6,7 @@ import {
   Projects,
   Contact,
   About,
-} from "@/Components";
+} from "@/components";
 
 function Home() {
   return (

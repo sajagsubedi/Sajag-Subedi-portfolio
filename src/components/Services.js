@@ -1,37 +1,13 @@
 import styles from "@/styles/Home.module.css";
-import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 export default function Services() {
-  useEffect(() => {
-    AOS.init({
-      duration: 100,
-    });
-  }, []);
   return (
     <section id="services" className={styles.Services}>
-      <div
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        className="SectionDivider"
-      ></div>
-      <h2 data-aos="fade-up" data-aos-duration="2000" className="SectionTitle">
-        My Services
-      </h2>
-      <h3
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        className="SectionSubHeading"
-      >
-        What Can I Offer?
-      </h3>
+      <div className="SectionDivider"></div>
+      <h2 className="SectionTitle">My Services</h2>
+      <h3 className="SectionSubHeading">What Can I Offer?</h3>
       <div className={styles.ServicesGroup}>
-        <div
-          data-aos="fade-up"
-          data-aos-duration="2000"
-          className={styles.ServiceItem}
-        >
+        <div className={styles.ServiceItem}>
           <div className={styles.ServiceIcon}>
             <svg
               viewBox="0 0 48 48"
@@ -40,10 +16,8 @@ export default function Services() {
               width="1.5em"
             >
               <path
-                fill="currentColor"
                 d="M7 36q-1.25 0-2.125-.875T4 33V9q0-1.25.875-2.125T7 6h34q1.25 0 2.125.875T44 9v24q0 1.25-.875 2.125T41 36Zm0-3h34V9H7v24Zm-3.5 9q-.65 0-1.075-.425Q2 41.15 2 40.5q0-.65.425-1.075Q2.85 39 3.5 39h41q.65 0 1.075.425Q46 39.85 46 40.5q0 .65-.425 1.075Q45.15 42 44.5 42ZM7 33V9v24Z"
-                                fill="#fff"
-                                
+                fill="#fff"
               />
             </svg>
           </div>
@@ -58,11 +32,7 @@ export default function Services() {
           </div>
         </div>
 
-        <div
-          data-aos="fade-up"
-          data-aos-duration="2000"
-          className={styles.ServiceItem}
-        >
+        <div className={styles.ServiceItem}>
           <div className={styles.ServiceIcon}>
             <svg
               width="1.5em"
@@ -86,11 +56,7 @@ export default function Services() {
             </p>
           </div>
         </div>
-        <div
-          data-aos="fade-up"
-          data-aos-duration="2000"
-          className={styles.ServiceItem}
-        >
+        <div className={styles.ServiceItem}>
           <div className={styles.ServiceIcon}>
             <svg
               xmlns="http://www.w3.org/2000/svg"

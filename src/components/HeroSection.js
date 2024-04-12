@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import Image from "next/image";
@@ -41,11 +42,11 @@ const HeroSection = () => {
       <div className={styles.heroImageHalf}>
         <div className={styles.heroImgBx}>
           <Image
-            className={styles.heroImg}
-            src={"/home.png"}
-            alt="Sajag"
-            objectFit="contain"
-            layout="fill"
+          className={styles.heroImg}
+          src={"/home.png"}
+          alt="Sajag"
+          objectFit="contain"
+          layout="fill"
           />
         </div>
         <div className={styles.heroImageTextBx}>

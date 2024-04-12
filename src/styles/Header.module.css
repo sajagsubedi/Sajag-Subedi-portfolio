@@ -168,7 +168,6 @@
     transition: width 0.5s;
     transition-delay: 0s;
   }
-
   .Navbar.active .menu {
     width: 50vw;
   }

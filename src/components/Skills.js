@@ -1,35 +1,16 @@
 import styles from "@/styles/Home.module.css";
-import { skills } from "../Constants/Skills.js";
-// import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { skills } from "@/constants/Skills.js";
 
 export default function Skills() {
-  window.addEventListener("load",()=>{
-      AOS.init({
-      duration: 1000,
-    });
-  });
-  // useEffect(() => {
-  //   AOS.init({
-  //     duration: 1000,
-  //   });
-  // }, []);
   return (
     <section id="skills" className={styles.Skills}>
       <div className="SectionDivider"></div>
-      <h2  data-aos="fade-up"
-        data-aos-duration="1000"
-        className="SectionTitle">My Skills</h2>
-      <h3  data-aos="fade-up"
-        data-aos-duration="2000"
-        className="SectionSubHeading">What Can I Do Well?</h3>
+      <h2 className="SectionTitle">My Skills</h2>
+      <h3 className="SectionSubHeading">What Can I Do Well?</h3>
       <div className={styles.skillsGroup}>
         {skills.map((skill, i) => {
           return (
             <div
-              data-aos="fade-up"
-              data-aos-duration="1000"
               key={i}
               className={styles.skillbar}
             >

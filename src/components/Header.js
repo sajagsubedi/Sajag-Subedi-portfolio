@@ -1,39 +1,36 @@
+"use client"
 import styles from "@/styles/Header.module.css";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState,useRef } from "react";
 
 export default function Header() {
   const [thememode, setThememode] = useState("");
   const themes = ["light", "dark"];
+  const Navbar=useRef(null)
+
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
     if (storedTheme && themes.includes(storedTheme)) {
-      console.log("stored theme is", storedTheme);
       setThememode(storedTheme);
     } else {
-      console.log("no storedTheme");
       setThememode("light");
     }
   }, []);
+  const handleMenuToggle=()=>{
+    Navbar.current.classList.toggle(styles.active);
+
+  }
+  const offFunc = () => {
+    Navbar.current.classList.remove(styles.active);
+  };
   useEffect(() => {
     let anchorTags = document.querySelectorAll(".menu li a");
-    const Navbar = document.getElementById("Navbar");
-    const menuToggle = document.getElementById("menuToggle");
-    const offFunc = () => {
-      Navbar.classList.remove(styles.active);
-    };
-
     for (let i = 0; i < anchorTags.length; i++) {
       anchorTags[i].addEventListener("click", offFunc);
     }
-    menuToggle.addEventListener("click", () => {
-      Navbar.classList.toggle(styles.active);
-    });
   }, []);
 
   const toggleTheme = () => {
-    console.log(thememode);
-    console.log("clicked");
     if (thememode === "dark") {
       setThememode("light");
     } else {
@@ -43,10 +40,8 @@ export default function Header() {
 
   useEffect(() => {
     if (thememode) {
-      console.log("theme mode to be changed is", thememode);
       themes.map((theme) => {
         document.body.classList.remove(theme);
-        console.log("removed ", theme);
       });
       localStorage.setItem("theme", thememode);
       document.body.classList.add(thememode);
@@ -54,7 +49,7 @@ export default function Header() {
   }, [thememode]);
   return (
     <header className={styles.Header} id="header">
-      <nav className={styles.Navbar} id="Navbar">
+      <nav className={styles.Navbar} id="Navbar" ref={Navbar}>
         <div className={styles.navFirsthalf}>
           <div className={styles.logoBx}>
             <svg
@@ -101,7 +96,7 @@ export default function Header() {
               </button>
             )}
           </div>
-          <div className={styles.menuToggle} id="menuToggle"></div>
+          <div className={styles.menuToggle} id="menuToggle" onClick={handleMenuToggle}></div>
         </div>
         <ul className={styles.menu}>
           <li>

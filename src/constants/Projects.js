@@ -20,23 +20,23 @@ const projects = [
     id: 2,
   },
   {
-    title: "iCalculator",
+    title: "TicTacToe",
     description:
-      "This is a user friendly Calculator  application which allows user to perform mathematical calcutions.",
+      "This is a tictactoe game allowing to play game online or locally with friends.",
     image: "/images/img3.jpg",
-    tags: ["React", "Styled-Components"],
-    source: "https://github.com/sajagsubedi/iCalculator",
-    visit: "https://icalculator.vercel.app",
+    tags: ["Nextjs", "Tailwind Css","Nodejs","Socket.io"],
+    source: "https://github.com/sajagsubedi/TicTacToe_Frontend/",
+    visit: "https://tictactoesajag.vercel.app/",
     id: 3,
   },
   {
-    title: "TextUtils",
+    title: "FoodieFusion",
     description:
-      "This is a  textutils application that allows user to manipulate their text into uppercase, lowercase, remove extra spaces , capitalize and copy it.",
+      "This is a  reciepe application that allows user to get and sort recipes according to meal,cusines and diet with easy interface.",
     image: "/images/img4.jpg",
-    tags: ["React", "Tailwind Css"],
-    source: "https://github.com/sajagsubedi/TextUtils",
-    visit: "https://ourtextutils.netlify.app/",
+    tags: ["Nextjs", "Styled Components","Redux Toolkit",],
+    source: "https://github.com/sajagsubedi/foodiefusion",
+    visit: "https://foodiefusion.vercel.app/",
     id: 4,
   },
 ];

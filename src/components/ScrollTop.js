@@ -1,14 +1,16 @@
-import { useState, useEffect } from "react";
+"use client"
 import styles from "@/styles/Home.module.css";
 
 export default function ScrollTop() {
-  const [scrollClass, setScrollClass] = useState("");
   const scrollTop = () => {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
   return (
     <button
-      className={`${styles.scrollTopBtn} ${scrollClass}`}
+      className={`${styles.scrollTopBtn}`}
       onClick={scrollTop}
     >
       <svg

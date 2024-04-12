@@ -1,52 +1,41 @@
+"use client" 
 import styles from "@/styles/Home.module.css";
-import { useEffect, useState, useRef } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import emailjs from "@emailjs/browser";
+import { useRef } from "react";
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   const form = useRef();
-  useEffect(() => {
-    AOS.init({
-      duration: 100,
-    });
-  }, []);
   const sendEmail = (e) => {
     e.preventDefault();
-    console.log(process.env);
     emailjs
-      .sendForm(
-        "service_28p58f9",
-        "template_ga97rxq",
-        form.current,
-        process.env.NEXT_PUBLIC_KEY
-      )
-      .then(
-        (result) => {
-          document
-            .querySelectorAll(".input-field-div .input-field")
-            .forEach((item) => {
-              item.value = "";
-            });
-        },
-        (error) => {}
-      );
+    .sendForm(
+      "service_28p58f9",
+      "template_ga97rxq",
+      form.current,
+      process.env.NEXT_PUBLIC_KEY
+    )
+    .then(
+      (result) => {
+        document
+          .querySelectorAll(".input-field-div .input-field")
+          .forEach((item) => {
+            item.value = "";
+          });
+      },
+      (error) => {}
+    );
   };
   return (
     <section id="contact" className={styles.Contact}>
       <div
-        data-aos="fade-up"
-        data-aos-duration="1000"
         className="SectionDivider"
       ></div>
-      <h2 data-aos="fade-up" data-aos-duration="1000" className="SectionTitle">
+      <h2  className="SectionTitle">
         Contact Me
       </h2>
       <form
         ref={form}
         onSubmit={sendEmail}
-        data-aos="fade-up"
-        data-aos-duration="1000"
         className={styles.form}
       >
         <h3 className={styles.formTitle}>Get In Touch</h3>

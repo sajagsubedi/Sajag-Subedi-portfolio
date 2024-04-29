@@ -11,15 +11,15 @@ const About = () => {
       <h3 className="SectionSubHeading">Get to know Me!</h3>
       <div className={styles.aboutBody}>
         <p className={styles.aboutText}>
-          Hello&comma; I&apos;m Sajag Subedi; a self-taught web developer from Pokhara. My coding journey began with an intense four-month dive into HTML&comma; CSS and JavaScript&comma; providing a solid foundation. Over the past two years&comma;
-          I&apos;ve honed my expertise in the MERN stack&comma; seamlessly integrating
-          Node.js and React.js into my skill set.
+          {`Hello, I'm Sajag Subedi, a self-taught web developer from Pokhara. My coding journey began with an intense four-month dive into HTML, CSS and JavaScript, providing a solid foundation. Over the past two years,
+          I,ve honed my expertise in the MERN stack, seamlessly integrating
+          Node.js and React.js into my skill set.`}
           <br />
-          <br /> &nbsp;&nbsp; Driven by the satisfaction of transforming
-          concepts into functional websites&comma; I continually refine my skills.
-          Recently&comma; I&apos;ve delved into Typescript&comma; C&comma; and Golang&comma; broadening my
-          capabilities. Let&apos;s connect and bring your visions to life through
-          code&comma; creating remarkable online experiences together.
+          <br /> {`    Driven by the satisfaction of transforming
+          concepts into functional websites, I continually refine my skills.
+          Recently, I,ve delved into Typescript, C, and Golang, broadening my
+          capabilities. Let,s connect and bring your visions to life through
+          code, creating remarkable online experiences together.`}
 </p>
     </div>
     </section>

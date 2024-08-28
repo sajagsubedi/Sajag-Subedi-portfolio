@@ -13,7 +13,7 @@ export default function Header() {
     if (storedTheme && themes.includes(storedTheme)) {
       setThememode(storedTheme);
     } else {
-      setThememode("light");
+      setThememode("dark");
     }
   }, []);
   const handleMenuToggle=()=>{
